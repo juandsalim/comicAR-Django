@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/static/css/style.css">
+
+    <script
+      src="https://kit.fontawesome.com/19704ccea8.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Notable&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="/static/css/sucursales_mobile.css" media="screen and (max-width:600px)">
+    <link rel="stylesheet" type="text/css" href="/static/css/sucursales_tablet.css" media="screen and (min-width:601px) and (max-width:1000px)">
+    <link rel="icon" type="image/png" href="/static/media/iconos/favicon.png">
+    <title>Comic.Ar - Sucursales</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="barra">
+          <h1><img class="logo" src="/static/media/img/logo1.png" alt="" /></h1>
+          <a href="{% url 'landing_page' %}">Inicio</a>
+          <a href="{% url 'sobreNosotros' %}">Sobre Nosotros</a>
+          <a href="{% url 'sucursales' %}">Sucursales</a>
+          <a href="{% url 'formulario' %}">Membresías y contacto</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="banner-sucursales">
+        <img src="/static/media/img/batman-superman.gif" alt="banner" />
+      </div>
+
+      <div class="glass">
+        <h2>Sucursales</h2>
+        <p>Encontra la mas cercana!</p>
+      </div>
+      <div class="mapas-flex">
+        <div class="mapa1">
+          <p><b>Av. Cabildo 2700, CABA</b></p>
+          <br />
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.859635205929!2d-58.46362618505395!3d-34.55710916253988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb42a46c97321%3A0x104f5605d909ac9a!2sAv.%20Cabildo%202700%2C%20C1428AAV%20CABA!5e0!3m2!1ses!2sar!4v1681244742808!5m2!1ses!2sar"
+            width="300"
+            height="225"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <div class="mapa2">
+          <p><b>Belgrano 200, San Isidro</b></p>
+          <br />
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3289.2787395526584!2d-58.51660758003553!3d-34.47045250469578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb03477b020b9%3A0x74b6cdfbf548dcc6!2sGral.%20Manuel%20Belgrano%20200%2C%20B1642DJE%20San%20Isidro%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1681244977339!5m2!1ses!2sar"
+            width="300"
+            height="225"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <div class="mapa3">
+          <p><b>Alvear 2480, Villa Ballester </b></p>
+          <br />
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d821.5549363862573!2d-58.55253567081124!3d-34.54799119417657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb755182f0d73%3A0x2873d701ab27f2b8!2sAlvear%202480%2C%20Villa%20Ballester%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1681245119780!5m2!1ses!2sar"
+            width="300"
+            height="225"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </main>
+    <footer id="area-footer">
+      <p><b>Buscanos en nuestras redes</b></p>
+      <div class="redes">
+        <i class="fa-brands fa-facebook fa-xl" style="color: #f17604"></i>
+        <i class="fa-brands fa-instagram fa-xl" style="color: #f17604"></i>
+        <i class="fa-brands fa-twitter fa-xl" style="color: #f17604"></i>
+      </div>
+      <p>Copyright 2023 © <b>COMIC.AR</b> todos los derechos reservados</p>
+    </footer>
+  </body>
+</html>

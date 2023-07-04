@@ -1,0 +1,274 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(201, 16, 16);
+}
+a:hover{
+    color: rgb(206, 127, 8);
+}
+
+head{
+    display: none;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    background-image: url(/static/media/img/fondoMain1.png);
+}
+header {
+    background-color: rgba(0, 0, 0, 0.9);
+    top: 0;
+    width: 100%;  
+}
+.logo{
+    width: 80px;
+    
+}
+nav{
+    display: block;
+}
+.barra{
+    font-family: 'Abel', sans-serif;
+    font-size: 25px;
+    max-width: 100%;
+    display:flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    align-items:center; 
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* TABLA */
+
+/* Nombres de columna negros y letras rojas */
+
+.table-wrapper {
+	overflow-x: auto;
+  }
+  
+  .table {
+	width: 95%;
+	border-collapse: collapse;
+	font-family: Raleway;
+	font-size: 22px;
+	margin:0 auto;
+  }
+  
+  .table thead tr th {
+	background-color: black;
+	color: red;
+	text-align: left;
+	padding: 10px;
+	font-size: 28px;
+  }
+  
+  .table tbody tr td {
+	background-color: #1e1e1e;
+	color: white;
+	padding: 10px;
+	text-align: center;
+	border-bottom: 2px solid #141414;
+  }
+  
+  .table tbody tr:last-child td {
+	background-color: black;
+	color: red;
+	font-size: 28px;
+  }
+  
+
+.robin{
+	width: 100%;
+	height:250px;
+  }
+
+  h1 {
+	font-family: Raleway, sans-serif;
+	font-size: 30px;
+	font-weight: bold;
+	color: black;
+	padding-left: 32px;
+  }
+
+.formulario {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+	width: 95%;
+	margin: 0 auto;
+}
+
+.formulario__label {
+	display: block;
+	font-weight: 700;
+	padding: 10px;
+	cursor: pointer;
+}
+
+.formulario__grupo-input {
+	position: relative;
+}
+
+.formulario__input {
+	width: 100%;
+	background: #fff;
+	border: 3px solid transparent;
+	border-radius: 3px;
+	height: 45px;
+	line-height: 45px;
+	padding: 0 40px 0 10px;
+	transition: .3s ease all;
+}
+
+.formulario__input:focus {
+	border: 3px solid blue;
+	outline: none;
+	box-shadow: 3px 0px 30px rgba(163,163,163, 0.4);
+}
+
+.formulario__input-error {
+	font-size: 12px;
+	margin-bottom: 0;
+	display: none;
+}
+
+.formulario__input-error-activo {
+	display: block;
+}
+
+.formulario__validacion-estado {
+	position: absolute;
+	right: 10px;
+	bottom: 15px;
+	z-index: 100;
+	font-size: 16px;
+	opacity: 0;
+}
+
+.formulario__checkbox {
+	margin-right: 10px;
+}
+
+.formulario__grupo-terminos, 
+/* .formulario__mensaje, */
+.formulario__grupo-btn-enviar {
+	grid-column: span 2;
+}
+
+/* .formulario__mensaje {
+	height: 0px;
+	line-height: 45px;
+	background: #F66060;
+	padding: 0 15px;
+	border-radius: 3px;
+	display: none;
+	opacity:0;
+} */
+
+.formulario__mensaje-activo {
+	display: block;
+}
+
+.formulario__mensaje p {
+	margin: 0;
+}
+
+.formulario__grupo-btn-enviar {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.formulario__btn {
+	height: 45px;
+	line-height: 45px;
+	width: 30%;
+	background: #000;
+	color: #fff;
+	font-weight: bold;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: .1s ease all;
+	margin-bottom: 50px;
+	
+}
+
+.formulario__btn:hover {
+	box-shadow: 3px 0px 30px rgba(163,163,163, 1);
+}
+
+.formulario__mensaje-exito {
+	font-size: 30px;
+	background-color:  #1ed12d ;
+	color: white;
+	display: none;
+}
+
+.formulario__mensaje-exito-activo {
+	display: block;
+}
+
+/* ----- -----  Estilos para Validacion ----- ----- */
+.formulario__grupo-correcto .formulario__validacion-estado {
+	color: #1ed12d;
+	font-size: 30px;
+	opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__label {
+	color: #bb2929;
+}
+
+.formulario__grupo-incorrecto .formulario__validacion-estado {
+	color: #bb2929;
+	opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__input {
+	border: 3px solid #bb2929;
+}
+
+
+footer{
+    background-color:rgb(0, 0, 0);
+    color: azure;
+    padding: 1.5%;
+    text-align: center;
+    margin-top: 2%;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+.redes{
+    padding: 10px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+
+/* ----- -----  Mediaqueries ----- ----- */
+@media screen and (max-width: 800px) {
+	.formulario {
+		grid-template-columns: 1fr;
+	}
+
+	.formulario__grupo-terminos, 
+	.formulario__mensaje,
+	.formulario__grupo-btn-enviar {
+		grid-column: 1;
+	}
+
+	.formulario__btn {
+		width: 100%;
+	}
+}
+

@@ -1,0 +1,378 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+head{
+    display: none;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    background-image: url(../media/img/fondoMain1.png);
+}
+
+
+header {
+    background-color: rgba(0, 0, 0, 0.9);
+    top: 0;
+    width: 100%;  
+}
+
+.galeria{
+    padding: 10px;
+    display: flex;
+    height: 630px;
+
+}
+
+.galeria img{
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8 ;
+    transition: .5s ease;
+}
+
+.galeria img:hover{
+    cursor: crosshair;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+
+}
+
+.logo{
+    width: 80px;
+    
+}
+
+a {
+    text-decoration: none;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(201, 16, 16);
+}
+a:hover{
+    color: rgb(206, 127, 8);
+}
+
+nav{
+    display: block;
+}
+.barra{
+    font-family: 'Abel', sans-serif;
+    font-size: 25px;
+    max-width: 100%;
+    display:flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    align-items:center; 
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.banner{
+    display: flex;
+    background-size: cover;
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+    margin: 1rem 0;
+}
+.banner img{
+    width: 100vw;  
+    height: 50vh;
+   
+}
+
+.bannerSobre{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../media/img/batman-reading-comics.jpg);
+    height: 250px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.glass{
+   
+    background: linear-gradient(
+        180deg,
+        rgba(253, 0, 0, 0.5),
+        rgba(231, 230, 230, 0.1) 
+    );
+    backdrop-filter: blur(21px);
+    -webkit-backdrop-filter: blur(21px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.36);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 24px;
+    padding: 10px;
+    margin: 10px;
+    
+    
+}
+
+.banner-sucursales{
+    display: flex;
+    background-size: cover;
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+    margin: 1rem 0;
+}
+
+.banner-sucursales img{
+    width: 100vw;  
+    height: 50vh;
+    /* Para sacar el fondo al gif*/
+    filter: brightness(1,1);
+    mix-blend-mode:darken;
+   
+}
+.glass :where(h2,p){
+    color: #f8e4e4;
+    text-align-last: center;
+    margin: 0;
+
+}
+
+.glass h2{
+    font-size: 2rem;
+    font-family: 'Notable', sans-serif;
+    text-shadow: 1px;
+}
+
+.glass p{
+    margin-top: 8px;
+    font-size: 16px;
+    color: #aa2626;
+    font-family: 'Notable', sans-serif;
+}
+
+
+.personajes{
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+    flex-wrap: wrap;
+   
+}
+
+ .personajes img{
+    
+    height: 150px;  
+ }
+
+ .personajes img:hover{
+    
+    height: 180px;
+    opacity: 1;
+    filter: contrast(120%);
+ }
+
+ .info {
+    width: 90%;
+    min-height: 260px;
+    background: rgba(194, 14, 14, 0.781);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center; 
+    border-radius: 5%;
+    box-shadow: 15px 15px 0px 0px rgba(9,46,9,1);
+    margin: 1rem;
+}
+.info h2{
+    padding: 1rem;
+    font-family: 'Notable', sans-serif;
+}
+
+.info p{
+    padding: 3rem;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+ .aboutnosotros {
+    display: flex;
+    width: 90vw;
+    margin: 2rem auto;
+} 
+
+.about {
+    display: flex;
+    width: 90vw;
+    margin: 2rem auto;
+    justify-content: center;  
+    flex-wrap: wrap ;
+}
+
+.equipo{
+    display: flex;
+    width: 80vw;
+    margin: 0.5rem auto;
+}
+
+
+
+.sobreNosotros{
+    background: linear-gradient(
+        135deg,
+        rgba(255,255,255,0.1),
+        rgba(255,255,255,0.1) 
+    );
+    backdrop-filter: blur(21px);
+    -webkit-backdrop-filter: blur(21px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.36);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 24px;
+    padding: 10px;
+    margin-top: 10px;
+    /* margin: 0px; */
+    text-align: center;
+}
+
+.sobreNosotros p{
+    padding: 3rem;
+    font-family: Arial, Helvetica, sans-serif
+}
+.sobreNosotros h2{
+    padding: 1rem;
+    font-family: 'Notable', sans-serif;
+}
+
+.seleccionado {
+    width: 20%;
+    min-height: 260px;
+    background: rgba(194, 14, 14, 0.781);
+    display: flex;
+    justify-content: center;
+    flex-direction:column;
+    text-align: center; 
+    border-radius: 5%;
+    box-shadow: 15px 15px 0px 0px rgba(9,46,9,1);
+    margin-block-start:auto;
+    margin-inline-start: 5rem;
+    margin-inline-end: 5rem;
+    margin-bottom: 1rem;
+    min-width: 20rem;
+}
+
+
+.seleccionado img{
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    width: 60%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-inline-start: 20%;
+}
+
+.seleccionado h2{
+    padding: 2rem;
+    font-family: 'Notable', sans-serif;
+}
+
+.seleccionado h3{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.seleccionado p{
+    padding: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+footer{
+    background-color:rgb(0, 0, 0);
+    color: azure;
+    padding: 1.5%;
+    text-align: center;
+    margin-top: 2%;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.gif{
+    display: flex;
+    justify-content: center;
+    margin: 2%;
+}
+.gif img{
+filter: brightness(1,1);
+mix-blend-mode: multiply;
+
+}
+
+.card{
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    margin: 0;
+}
+
+.spiderman{
+    width: 200px;
+    margin: 0 auto;
+    display: block;
+    animation: spiderman 5s infinite;
+}
+
+.redes{
+    padding: 10px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+@keyframes spiderman{
+    0%{
+        transform: translateY(-50px);
+    }
+    30%{
+        transform: translateY(0)rotate(5deg);
+    }
+    50%{
+        transform: rotate(-5deg);
+    }
+    75%{
+        transform: rotate(5deg);
+    }
+    100%{
+        transform: translateY(-50px);
+    }
+
+}
+
+/* Pagina sucursales  */
+
+ .mapas-flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+ } 
+  
+ .mapa1, .mapa2, .mapa3{
+    background-color: rgb(255, 255, 203);
+    padding: 10px;
+    margin: 10px;
+    color:rgba(194, 14, 14, 0.781);
+    text-align: center;
+    transition: all 1s ease;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;   
+    border-radius: 24px;
+    border: 2px solid rgba(194, 14, 14, 0.781);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    box-shadow: 0 0 10px #727272;
+    cursor: url(../media/iconos/hombre-arana.png), pointer !important;
+}
+
+.mapa1:hover, .mapa2:hover, .mapa3:hover{
+    color:black;
+    background-color:rgba(245, 209, 209, 0.781);
+    text-shadow: 2px;
+}

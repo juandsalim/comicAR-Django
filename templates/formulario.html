@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./assets/css/estilos_formulario.css">
+	 -->
+	 
+	 <link rel="stylesheet" href="/static/css/estilos_formulario.css">
+	 
+	 <script src="https://kit.fontawesome.com/19704ccea8.js" crossorigin="anonymous"></script>
+	 <link rel="preconnect" href="https://fonts.googleapis.com">
+	 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	 <link href="https://fonts.googleapis.com/css2?family=Notable&display=swap" rel="stylesheet">
+	 <link rel="icon" type="image/png" href="/static/media/iconos/favicon.png">
+	 <title> Comic.Ar - Membresias</title>
+</head>
+
+<body>
+	<main>
+		<header>
+			<nav>
+				<div class="barra">
+					<h1><img class="logo" src="/static/media/img/logo1.png" alt=""></h1>
+					<a href="{% url 'landing_page' %}">Inicio</a>
+					<a href="{% url 'sobreNosotros' %}">Sobre Nosotros</a>
+					<a href="{% url 'sucursales' %}">Sucursales</a>
+					<a href="{% url 'formulario' %}">Membresías y contacto</a>
+				</div>
+			</nav>
+		</header>
+		<div class="gif">
+			<img src="/static/media/img/gif_supers.gif" alt="" class="robin">
+		</div>
+		<div class="container">
+			<h1>MEMBRESÍAS</h1>
+			<div class="table-wrapper table-responsive">
+				<table class="table">
+					<thead>
+						<tr>
+							<th>Incluye</th>
+							<th>Membresía Héroe</th>
+							<th>Membresía Súper </th>
+							<th>Membresía Ultra</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Uso de instalaciones en todo momento</td>
+							<td> 🕷️</td>
+							<td> 🕷️</td>
+							<td> 🕷️</td>
+						</tr>
+						<tr>
+							<td>Comic online por mes a elección</td>
+							<td> 1 comic</td>
+							<td>3 comics</td>
+							<td>Comics ilimitados</td>
+						</tr>
+						<tr>
+							<td>Newsletter de noticias de comics</td>
+							<td></td>
+							<td> 🕷️</td>
+							<td> 🕷️</td>
+						</tr>
+						<tr>
+							<td>Entradas a premier de películas de superheroes</td>
+							<td></td>
+							<td></td>
+							<td>2 entradas</td>
+						</tr>
+						<tr>
+							<td>Precio</td>
+							<td>$2.000 x mes</td>
+							<td>$3.000 x mes</td>
+							<td>$5.000 x mes</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<br>
+			<hr>
+			<h1>FORMULARIO DE CONTACTO</h1>
+			<form action="" class="formulario" id="formulario">
+				<!-- Grupo: Nombre-->
+				<div class="formulario__grupo" id="grupo__nombre">
+					<label for="nombre" class="formulario__label">Nombre*</label>
+					<div class="formulario__grupo-input">
+						<input type="text" class="formulario__input" name="nombre" id="nombre"
+							placeholder="Escribí tu nombre">
+						<i class="formulario__validacion-estado fas fa-times-circle"></i>
+					</div>
+					<p class="formulario__input-error">El nombre no debe contener caracteres especiales.</p>
+				</div>
+
+				<!-- Grupo: Apellido -->
+				<div class="formulario__grupo" id="grupo__apellido">
+					<label for="apellido" class="formulario__label">Apellido*</label>
+					<div class="formulario__grupo-input">
+						<input type="text" class="formulario__input" name="apellido" id="apellido"
+							placeholder="Escribí tu apellido">
+						<i class="formulario__validacion-estado fas fa-times-circle"></i>
+					</div>
+					<p class="formulario__input-error">El nombre no debe contener caracteres especiales.</p>
+				</div>
+
+				<!-- Grupo: Correo Electronico -->
+				<div class="formulario__grupo" id="grupo__correo">
+					<label for="correo" class="formulario__label">Correo Electrónico*</label>
+					<div class="formulario__grupo-input">
+						<input type="email" class="formulario__input" name="correo" id="correo"
+							placeholder="correo@correo.com">
+						<i class="formulario__validacion-estado fas fa-times-circle"></i>
+					</div>
+					<p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y
+						guion bajo.</p>
+				</div>
+
+				<!-- Grupo: Correo Electronico2 -->
+				<div class="formulario__grupo" id="grupo__correo2">
+					<label for="correo2" class="formulario__label">Repetir Correo Electrónico*</label>
+					<div class="formulario__grupo-input">
+						<input type="email" class="formulario__input" name="correo2" id="correo2"
+							placeholder="correo@correo.com">
+						<i class="formulario__validacion-estado fas fa-times-circle"></i>
+					</div>
+					<p class="formulario__input-error">El correo debe coincidir.</p>
+				</div>
+
+				<!-- Grupo: Teléfono -->
+				<div class="formulario__grupo" id="grupo__telefono">
+					<label for="telefono" class="formulario__label">Teléfono*</label>
+					<div class="formulario__grupo-input">
+						<input type="text" class="formulario__input" name="telefono" id="telefono"
+							placeholder="4491234567">
+						<i class="formulario__validacion-estado fas fa-times-circle"></i>
+					</div>
+					<p class="formulario__input-error">El telefono solo puede contener numeros y el maximo son 14
+						dígitos.</p>
+				</div>
+
+				<!-- Grupo: Personaje -->
+				<div class="formulario__grupo" id="grupo__personaje">
+					<label for="personaje" class="formulario__label">Personaje Favorito</label>
+					<div class="formulario__grupo-input">
+						<input type="text" class="formulario__input" name="personaje" id="personaje"
+							placeholder="superman">
+							<i class="formulario__validacion-estado fas fa-times-circle"></i>
+						</div>
+						<p class="formulario__input-error">No debe contener caracteres especiales.</p>
+					</div>
+				<!-- Grupo: Terminos y Condiciones -->
+				<div class="formulario__grupo" id="grupo__terminos">
+					<label class="formulario__label">
+						<input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos">
+						Acepto los Terminos y Condiciones
+					</label>
+				</div>
+
+				<!-- <div class="formulario__mensaje" id="formulario__mensaje">
+					<p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario
+						correctamente. </p>
+				</div> -->
+
+				<div class="formulario__grupo formulario__grupo-btn-enviar">
+					<button type="submit" class="formulario__btn">Enviar</button>
+					<p class="formulario__mensaje-exito" id="formulario__mensaje-exito">¡Formulario enviado exitosamente!
+					</p>
+				</div>
+			</form>
+	</main>
+	<footer>
+        <p><b>Buscanos en nuestras redes</b></p>
+        <div class="redes">
+            
+            <i class="fa-brands fa-facebook fa-xl" style="color: #f17604;"></i>
+            <i class="fa-brands fa-instagram fa-xl" style="color: #f17604;"></i>
+            <i class="fa-brands fa-twitter fa-xl" style="color: #f17604;"></i>
+
+        </div>
+        <p>Copyright 2023 © <b>COMINC.AR</b> todos los derechos reservados</p>
+    </footer>
+	<script src="/static/js/formulario.js"></script>
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
